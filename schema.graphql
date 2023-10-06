@@ -1,0 +1,4 @@
+type Question {
+  question: String!
+  answer: String!
+}

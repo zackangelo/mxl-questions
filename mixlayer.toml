@@ -1,0 +1,13 @@
+name = "mxl-questions"
+env = []
+
+[sources.ndjsontest]
+type = "ndjson"
+file = "data.ndjson"
+schema = "schema.graphql"
+element_type = "Question"
+search = { fields = ["question", "answer"], vector = true }
+
+[chat]
+sys_prompt = "You are a helpful assistant acting on behalf of Zack Angelo. Use the questions and answers in the context section to answer as if you were Zack."
+collections = ["ndjsontest"]
